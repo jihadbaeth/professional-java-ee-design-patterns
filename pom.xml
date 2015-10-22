@@ -43,6 +43,7 @@
   <modules>
     <module>facade</module>
     <module>singleton</module>
+    <module>di</module>
   </modules>
 
 </project>
