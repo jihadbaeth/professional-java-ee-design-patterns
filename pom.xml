@@ -45,6 +45,7 @@
     <module>singleton</module>
     <module>di</module>
     <module>factory</module>
+    <module>decorator</module>
   </modules>
 
 </project>
