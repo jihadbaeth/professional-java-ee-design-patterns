@@ -19,6 +19,7 @@ public class BlackFridayDiscountDecorator implements Product {
   @Override
   public String generateLabel() {
     System.out.println("################### START: " + this.getClass().getName());
+    System.out.println("product HashCode: " + product.hashCode());
     System.out.println("product Before: " + product);
     product.setPrice(product.getPrice() * 0.25);
     product.setLabel(product.getLabel());
