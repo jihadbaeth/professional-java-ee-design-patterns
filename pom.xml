@@ -46,6 +46,7 @@
     <module>di</module>
     <module>factory</module>
     <module>decorator</module>
+    <module>interceptor</module>
   </modules>
 
 </project>
