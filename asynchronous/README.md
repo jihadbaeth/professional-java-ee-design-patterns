@@ -27,3 +27,17 @@ The Above `curl` request receives the response in about 1 second, and server.log
 ```
 
 (1), (2) are asynchronous logs on an EJB thread.
+
+### AsyncServlet
+
+``` sh
+$ time curl localhost:8080/async
+Results: Data{value='Foo'}
+curl localhost:8080/async  0.00s user 0.01s system 0% cpu 5.016 total
+```
+
+server.log(standard output) displays the following log.
+
+``` sh
+2015-10-30 00:42:19,511 INFO  [stdout] (default task-1) Read data...
+```
