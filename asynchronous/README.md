@@ -8,10 +8,11 @@ $ mvn clean package && java -jar ./target/asynchronous-swarm.jar
 
 ## Access the app
 
-### Asynchronous log
+### Asynchronous EJB
 
 ``` sh
-$ curl localhost:8080/api/test-logging
+$ time curl localhost:8080/api/test-logging
+curl localhost:8080/api/test-logging  0.00s user 0.01s system 0% cpu 1.120 total
 ```
 
 The Above `curl` request receives the response in about 1 second, and server.log(standard output) displays the following log.
