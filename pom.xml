@@ -47,6 +47,7 @@
     <module>factory</module>
     <module>decorator</module>
     <module>interceptor</module>
+    <module>asynchronous</module>
   </modules>
 
 </project>
