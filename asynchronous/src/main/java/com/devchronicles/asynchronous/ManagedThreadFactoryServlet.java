@@ -1,7 +1,7 @@
 package com.devchronicles.asynchronous;
 
 import javax.annotation.Resource;
-import javax.enterprise.concurrent.ManagedExecutorService;
+import javax.enterprise.concurrent.ManagedThreadFactory;
 import javax.servlet.AsyncContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,11 +15,11 @@ import java.util.concurrent.TimeUnit;
 /**
  * @author Yoshimasa Tanabe
  */
-@WebServlet(urlPatterns = "/managed-executor-service", asyncSupported = true)
-public class ManagedExecutorServiceServlet extends HttpServlet {
+@WebServlet(urlPatterns = "/managed-thread-factory", asyncSupported = true)
+public class ManagedThreadFactoryServlet extends HttpServlet {
 
-  @Resource(lookup = "java:jboss/ee/concurrency/executor/default")
-  private ManagedExecutorService executor;
+  @Resource(lookup = "java:jboss/ee/concurrency/factory/default")
+  private ManagedThreadFactory factory;
 
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -28,17 +28,17 @@ public class ManagedExecutorServiceServlet extends HttpServlet {
 
     final Data data = new Data();
 
-    executor.submit(() -> {
+    factory.newThread(() -> {
       try {
         TimeUnit.SECONDS.sleep(5);
       } catch (InterruptedException e) {
         e.printStackTrace();
       }
-      System.out.println("Using ManagedExecutorService");
-      data.setValue("ManagedExecutorService");
+      System.out.println("Using ManagedThreadFactory");
+      data.setValue("ManagedThreadFactory");
       writer.println(data);
       asyncContext.complete();
-    });
+    }).start();
 
     System.out.println("Read data...");
 

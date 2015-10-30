@@ -46,7 +46,8 @@ public class AsyncServlet extends HttpServlet {
       } catch (InterruptedException e) {
         e.printStackTrace();
       }
-      data.setValue("Foo");
+      System.out.println("Using Thread");
+      data.setValue("Thread");
       asyncContext.complete();
     }).start();
 
