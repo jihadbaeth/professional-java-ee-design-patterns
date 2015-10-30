@@ -17,7 +17,7 @@ import java.io.PrintWriter;
 @WebServlet(urlPatterns = "/managed-executor-service", asyncSupported = true)
 public class ManagedExecutorServiceServlet extends HttpServlet {
 
-//  @Resource
+  @Resource(lookup = "java:jboss/ee/concurrency/executor/default")
   private ManagedExecutorService executor;
 
   @Override
