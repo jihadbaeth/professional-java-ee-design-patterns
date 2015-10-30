@@ -48,6 +48,7 @@
     <module>decorator</module>
     <module>interceptor</module>
     <module>asynchronous</module>
+    <module>timer</module>
   </modules>
 
 </project>
