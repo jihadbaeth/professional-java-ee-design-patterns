@@ -49,6 +49,7 @@
     <module>interceptor</module>
     <module>asynchronous</module>
     <module>timer</module>
+    <module>observer</module>
   </modules>
 
 </project>
