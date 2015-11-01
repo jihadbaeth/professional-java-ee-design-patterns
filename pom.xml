@@ -50,6 +50,7 @@
     <module>asynchronous</module>
     <module>timer</module>
     <module>observer</module>
+    <module>dao</module>
   </modules>
 
 </project>
