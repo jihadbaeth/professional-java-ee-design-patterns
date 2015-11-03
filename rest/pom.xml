@@ -22,9 +22,9 @@
       <version>${version.wildfly-swarm}</version>
     </dependency>
     <dependency>
-      <groupId>org.glassfish</groupId>
-      <artifactId>javax.json</artifactId>
-      <version>1.0.3</version>
+      <groupId>org.wildfly.swarm</groupId>
+      <artifactId>wildfly-swarm-jaxrs-jsonp</artifactId>
+      <version>${version.wildfly-swarm}</version>
     </dependency>
   </dependencies>
 
