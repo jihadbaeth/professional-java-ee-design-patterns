@@ -51,6 +51,7 @@
     <module>timer</module>
     <module>observer</module>
     <module>dao</module>
+    <module>rest</module>
   </modules>
 
 </project>
