@@ -52,6 +52,7 @@
     <module>observer</module>
     <module>dao</module>
     <module>rest</module>
+    <module>mvc</module>
   </modules>
 
 </project>
