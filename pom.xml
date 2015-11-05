@@ -53,6 +53,7 @@
     <module>dao</module>
     <module>rest</module>
     <module>mvc</module>
+    <module>websockets</module>
   </modules>
 
 </project>
